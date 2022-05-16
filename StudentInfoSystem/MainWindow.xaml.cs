@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
 using Microsoft.Win32;
+
 namespace StudentInfoSystem
 {
     /// <summary>
@@ -47,7 +48,7 @@ namespace StudentInfoSystem
 
         private void InitFacDropdown()
         {
-            var query = from student in StudentData.TestStudents group student by student.Facultee into fak orderby fak.Key select fak;
+            var query = from student in StudentData.TestStudents group student by student.Faculty into fak orderby fak.Key select fak;
             //FaculteeList.Clear();
             FaculteeList = new List<string>();
             foreach (var fakultet in query)
@@ -119,8 +120,8 @@ namespace StudentInfoSystem
                 tbSurName.Text = Student.SurName;
                 tbLastName.Text = Student.LastName;
 
-                tbFacultee.Text = Student.Facultee;
-                tbSpecialtee.Text = Student.Specialtee;
+                tbFacultee.Text = Student.Faculty;
+                tbSpecialtee.Text = Student.Specialty;
                 tbDegree.Text = Student.Degree.ToString();
                 tbStatus.Text = Student.Status.ToString();
                 tbFacNumber.Text = Student.FacNumber;

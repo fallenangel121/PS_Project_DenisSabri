@@ -57,8 +57,8 @@ namespace StudentInfoSystem
                         FacNumber = student.FacNumber,
                         FullName = getFullName(student),
                         OKS = student.Degree.ToString(),
-                        Specialty = student.Specialtee,
-                        Facultee = student.Facultee,
+                        Specialty = student.Specialty,
+                        Facultee = student.Faculty,
                         Course = student.Course,
                         Group = student.Group,
                         Potok = student.Stream

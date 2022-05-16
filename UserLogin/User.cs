@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace UserLogin
 {
     public class User
+
     {
+        public Int32 UserId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string FakNum { get; set; }
